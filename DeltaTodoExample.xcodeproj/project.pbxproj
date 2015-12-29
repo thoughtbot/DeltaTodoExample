@@ -20,6 +20,9 @@
 		E7144B131C33082C00928714 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7144B121C33082C00928714 /* AppState.swift */; };
 		E7144B151C33087000928714 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7144B141C33087000928714 /* Todo.swift */; };
 		E7144B171C33094E00928714 /* ReactiveCocoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7144B161C33094E00928714 /* ReactiveCocoa.swift */; };
+		E7144B191C330AB700928714 /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7144B181C330AB700928714 /* TodoTableViewController.swift */; };
+		E7144B1C1C330AF900928714 /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7144B1B1C330AF900928714 /* TodoTableViewCell.swift */; };
+		E7144B1E1C330BEB00928714 /* TodosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7144B1D1C330BEB00928714 /* TodosViewModel.swift */; };
 		F17E1DE22D421D0B5179D954 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64EBEFC0F7F3C46826438380 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +54,9 @@
 		E7144B121C33082C00928714 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		E7144B141C33087000928714 /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		E7144B161C33094E00928714 /* ReactiveCocoa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveCocoa.swift; sourceTree = "<group>"; };
+		E7144B181C330AB700928714 /* TodoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
+		E7144B1B1C330AF900928714 /* TodoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodoTableViewCell.swift; path = Views/TodoTableViewCell.swift; sourceTree = "<group>"; };
+		E7144B1D1C330BEB00928714 /* TodosViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodosViewModel.swift; sourceTree = "<group>"; };
 		F18692A99FA11363087CDA86 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -107,6 +113,7 @@
 		129A5578B71CC71780E2C23E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E7144B1D1C330BEB00928714 /* TodosViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -207,6 +214,7 @@
 				D52C07A1853B902372F82321 /* Models */,
 				129A5578B71CC71780E2C23E /* ViewModels */,
 				E467C40B65046AE38A2CE60D /* Controllers */,
+				E7144B1A1C330AE400928714 /* Views */,
 				21A503345CB161E8980557E4 /* Resources */,
 				E7144B0E1C33081B00928714 /* Store.swift */,
 				E7144B101C33082400928714 /* Getters.swift */,
@@ -219,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				7B6C0F572E820C16B8ACCB6D /* AppDelegate.swift */,
+				E7144B181C330AB700928714 /* TodoTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -229,6 +238,14 @@
 				F18692A99FA11363087CDA86 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		E7144B1A1C330AE400928714 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E7144B1B1C330AF900928714 /* TodoTableViewCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,7 +402,10 @@
 				E7144B171C33094E00928714 /* ReactiveCocoa.swift in Sources */,
 				28C5C9B779A42774C0071E4D /* AppDelegate.swift in Sources */,
 				E7144B0F1C33081B00928714 /* Store.swift in Sources */,
+				E7144B1C1C330AF900928714 /* TodoTableViewCell.swift in Sources */,
+				E7144B1E1C330BEB00928714 /* TodosViewModel.swift in Sources */,
 				E7144B111C33082400928714 /* Getters.swift in Sources */,
+				E7144B191C330AB700928714 /* TodoTableViewController.swift in Sources */,
 				E7144B131C33082C00928714 /* AppState.swift in Sources */,
 				E7144B151C33087000928714 /* Todo.swift in Sources */,
 			);
