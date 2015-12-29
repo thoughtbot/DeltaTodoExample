@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+bundle install
+carthage update --platform iOS
+
