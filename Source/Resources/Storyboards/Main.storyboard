@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Delta Todo Example-->
@@ -13,6 +14,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="uhS-Gg-Ppp" userLabel="Footer View" customClass="FooterView" customModule="DeltaTodoExample" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="136" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gf-lz-LC8">
+                                    <rect key="frame" x="8" y="0.0" width="584" height="44"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 items Left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6G-tK-JWG">
+                                            <rect key="frame" x="0.0" y="0.0" width="584" height="44"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.96782967931937169" green="0.96782967931937169" blue="0.96782967931937169" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="1gf-lz-LC8" secondAttribute="bottom" id="4dx-bY-dsM"/>
+                                <constraint firstItem="1gf-lz-LC8" firstAttribute="trailing" secondItem="uhS-Gg-Ppp" secondAttribute="trailingMargin" id="BQy-CW-nkr"/>
+                                <constraint firstItem="1gf-lz-LC8" firstAttribute="leading" secondItem="uhS-Gg-Ppp" secondAttribute="leadingMargin" id="Soc-Ua-pNL"/>
+                                <constraint firstItem="1gf-lz-LC8" firstAttribute="top" secondItem="uhS-Gg-Ppp" secondAttribute="top" id="zWW-Ii-Fs6"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="todoCell" textLabel="V35-CZ-MdP" style="IBUITableViewCellStyleDefault" id="6o5-XK-eKw" customClass="TodoTableViewCell" customModule="DeltaTodoExample" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
