@@ -15,6 +15,11 @@
 		E7144B091C33074500928714 /* Delta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7144B081C33074500928714 /* Delta.framework */; };
 		E7144B0B1C33074800928714 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7144B0A1C33074800928714 /* Result.framework */; };
 		E7144B0D1C33074B00928714 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7144B0C1C33074B00928714 /* ReactiveCocoa.framework */; };
+		E7144B0F1C33081B00928714 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7144B0E1C33081B00928714 /* Store.swift */; };
+		E7144B111C33082400928714 /* Getters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7144B101C33082400928714 /* Getters.swift */; };
+		E7144B131C33082C00928714 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7144B121C33082C00928714 /* AppState.swift */; };
+		E7144B151C33087000928714 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7144B141C33087000928714 /* Todo.swift */; };
+		E7144B171C33094E00928714 /* ReactiveCocoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7144B161C33094E00928714 /* ReactiveCocoa.swift */; };
 		F17E1DE22D421D0B5179D954 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64EBEFC0F7F3C46826438380 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +46,11 @@
 		E7144B081C33074500928714 /* Delta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Delta.framework; path = Carthage/Build/iOS/Delta.framework; sourceTree = "<group>"; };
 		E7144B0A1C33074800928714 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		E7144B0C1C33074B00928714 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		E7144B0E1C33081B00928714 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		E7144B101C33082400928714 /* Getters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Getters.swift; sourceTree = "<group>"; };
+		E7144B121C33082C00928714 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		E7144B141C33087000928714 /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		E7144B161C33094E00928714 /* ReactiveCocoa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveCocoa.swift; sourceTree = "<group>"; };
 		F18692A99FA11363087CDA86 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -153,6 +163,7 @@
 		80361F3113FF1B9EEA0DCDE1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E7144B161C33094E00928714 /* ReactiveCocoa.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -184,6 +195,7 @@
 		D52C07A1853B902372F82321 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E7144B141C33087000928714 /* Todo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,6 +208,9 @@
 				129A5578B71CC71780E2C23E /* ViewModels */,
 				E467C40B65046AE38A2CE60D /* Controllers */,
 				21A503345CB161E8980557E4 /* Resources */,
+				E7144B0E1C33081B00928714 /* Store.swift */,
+				E7144B101C33082400928714 /* Getters.swift */,
+				E7144B121C33082C00928714 /* AppState.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -367,7 +382,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7144B171C33094E00928714 /* ReactiveCocoa.swift in Sources */,
 				28C5C9B779A42774C0071E4D /* AppDelegate.swift in Sources */,
+				E7144B0F1C33081B00928714 /* Store.swift in Sources */,
+				E7144B111C33082400928714 /* Getters.swift in Sources */,
+				E7144B131C33082C00928714 /* AppState.swift in Sources */,
+				E7144B151C33087000928714 /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
