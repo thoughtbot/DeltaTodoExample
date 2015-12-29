@@ -23,6 +23,7 @@
 		E7144B191C330AB700928714 /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7144B181C330AB700928714 /* TodoTableViewController.swift */; };
 		E7144B1C1C330AF900928714 /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7144B1B1C330AF900928714 /* TodoTableViewCell.swift */; };
 		E7144B1E1C330BEB00928714 /* TodosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7144B1D1C330BEB00928714 /* TodosViewModel.swift */; };
+		E7144B211C330EB000928714 /* ToggleCompletedAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7144B201C330EB000928714 /* ToggleCompletedAction.swift */; };
 		F17E1DE22D421D0B5179D954 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64EBEFC0F7F3C46826438380 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		E7144B181C330AB700928714 /* TodoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
 		E7144B1B1C330AF900928714 /* TodoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodoTableViewCell.swift; path = Views/TodoTableViewCell.swift; sourceTree = "<group>"; };
 		E7144B1D1C330BEB00928714 /* TodosViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodosViewModel.swift; sourceTree = "<group>"; };
+		E7144B201C330EB000928714 /* ToggleCompletedAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToggleCompletedAction.swift; path = Actions/ToggleCompletedAction.swift; sourceTree = "<group>"; };
 		F18692A99FA11363087CDA86 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -210,6 +212,7 @@
 		DE1D36CEDD00A317A35CDC2A /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				E7144B1F1C330E9D00928714 /* Actions */,
 				80361F3113FF1B9EEA0DCDE1 /* Extensions */,
 				D52C07A1853B902372F82321 /* Models */,
 				129A5578B71CC71780E2C23E /* ViewModels */,
@@ -246,6 +249,14 @@
 				E7144B1B1C330AF900928714 /* TodoTableViewCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		E7144B1F1C330E9D00928714 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				E7144B201C330EB000928714 /* ToggleCompletedAction.swift */,
+			);
+			name = Actions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,6 +413,7 @@
 				E7144B171C33094E00928714 /* ReactiveCocoa.swift in Sources */,
 				28C5C9B779A42774C0071E4D /* AppDelegate.swift in Sources */,
 				E7144B0F1C33081B00928714 /* Store.swift in Sources */,
+				E7144B211C330EB000928714 /* ToggleCompletedAction.swift in Sources */,
 				E7144B1C1C330AF900928714 /* TodoTableViewCell.swift in Sources */,
 				E7144B1E1C330BEB00928714 /* TodosViewModel.swift in Sources */,
 				E7144B111C33082400928714 /* Getters.swift in Sources */,
