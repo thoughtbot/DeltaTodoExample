@@ -31,4 +31,21 @@ class TodoTableViewController: UITableViewController {
         store.dispatch(ToggleCompletedAction(todo: todo))
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
+
+    @IBAction func addTapped(sender: UIBarButtonItem) {
+        let alertController = UIAlertController(title: "Create", message: "Create a new todo item", preferredStyle: .Alert)
+
+        alertController.addTextFieldWithConfigurationHandler() { textField in
+            textField.placeholder = "Name"
+        }
+
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .Cancel) { _ in })
+        alertController.addAction(UIAlertAction(title: "Create", style: .Default) { _ in
+            guard let name = alertController.textFields?.first?.text else { return }
+
+            store.dispatch(CreateTodoAction(name: name))
+        })
+
+        presentViewController(alertController, animated: false, completion: nil)
+    }
 }

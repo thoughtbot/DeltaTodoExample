@@ -24,6 +24,7 @@
 		E7144B1C1C330AF900928714 /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7144B1B1C330AF900928714 /* TodoTableViewCell.swift */; };
 		E7144B1E1C330BEB00928714 /* TodosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7144B1D1C330BEB00928714 /* TodosViewModel.swift */; };
 		E7144B211C330EB000928714 /* ToggleCompletedAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7144B201C330EB000928714 /* ToggleCompletedAction.swift */; };
+		E7C976CF1C331C4E000ECE96 /* CreateTodoAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C976CE1C331C4E000ECE96 /* CreateTodoAction.swift */; };
 		F17E1DE22D421D0B5179D954 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64EBEFC0F7F3C46826438380 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		E7144B1B1C330AF900928714 /* TodoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodoTableViewCell.swift; path = Views/TodoTableViewCell.swift; sourceTree = "<group>"; };
 		E7144B1D1C330BEB00928714 /* TodosViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodosViewModel.swift; sourceTree = "<group>"; };
 		E7144B201C330EB000928714 /* ToggleCompletedAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToggleCompletedAction.swift; path = Actions/ToggleCompletedAction.swift; sourceTree = "<group>"; };
+		E7C976CE1C331C4E000ECE96 /* CreateTodoAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateTodoAction.swift; path = Actions/CreateTodoAction.swift; sourceTree = "<group>"; };
 		F18692A99FA11363087CDA86 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -255,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				E7144B201C330EB000928714 /* ToggleCompletedAction.swift */,
+				E7C976CE1C331C4E000ECE96 /* CreateTodoAction.swift */,
 			);
 			name = Actions;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				E7144B191C330AB700928714 /* TodoTableViewController.swift in Sources */,
 				E7144B131C33082C00928714 /* AppState.swift in Sources */,
 				E7144B151C33087000928714 /* Todo.swift in Sources */,
+				E7C976CF1C331C4E000ECE96 /* CreateTodoAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

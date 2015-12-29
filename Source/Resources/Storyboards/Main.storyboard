@@ -37,7 +37,13 @@
                             <outlet property="delegate" destination="XbV-bS-n0P" id="aG0-fi-zEZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Delta Todo Example" id="RNF-De-ffH"/>
+                    <navigationItem key="navigationItem" title="Delta Todo Example" id="RNF-De-ffH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Aeh-nB-MDP">
+                            <connections>
+                                <action selector="addTapped:" destination="XbV-bS-n0P" id="wKC-Nu-Vyr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t2O-qr-Cne" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
