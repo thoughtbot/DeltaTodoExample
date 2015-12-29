@@ -10,13 +10,16 @@ class FooterView: UIView {
     }
 
     override func awakeFromNib() {
-        store.incompleteTodos.startWithNext { todos in
-            let count = todos.count
+        self.subscribeToStoreChanges()
+    }
 
-            if count == 1 {
+    func subscribeToStoreChanges() {
+        store.todoStats.startWithNext { todosCount, incompleteCount in
+
+            if incompleteCount == 1 {
                 self.itemsLeftLabel?.text = "1 todo left"
             } else {
-                self.itemsLeftLabel?.text = "\(count) todos left"
+                self.itemsLeftLabel?.text = "\(incompleteCount) todos left"
             }
         }
     }

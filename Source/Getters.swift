@@ -11,6 +11,18 @@ extension Store {
         }
     }
 
+    var incompleteTodosCount: SignalProducer<Int, NoError> {
+        return incompleteTodos.map { $0.count }
+    }
+
+    var allTodosCount: SignalProducer<Int, NoError> {
+        return todos.producer.map { $0.count }
+    }
+
+    var todoStats: SignalProducer<(Int, Int), NoError> {
+        return allTodosCount.zipWith(incompleteTodosCount)
+    }
+
     func producerForTodo(todo: Todo) -> SignalProducer<Todo, NoError> {
         return store.todos.producer.map { todos in
             return todos.filter { $0 == todo }.first
