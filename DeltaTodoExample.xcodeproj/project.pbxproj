@@ -12,6 +12,9 @@
 		65237A078BBF0C5DC8BAF852 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 285D0BC94B538F39922C7D52 /* Settings.bundle */; };
 		C7A7B4D5BDB8F35275A96B04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18692A99FA11363087CDA86 /* Foundation.framework */; };
 		D7B3504E177EBCBEB407FB0C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 646D78854735240C7674C1A7 /* LaunchScreen.xib */; };
+		E7144B091C33074500928714 /* Delta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7144B081C33074500928714 /* Delta.framework */; };
+		E7144B0B1C33074800928714 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7144B0A1C33074800928714 /* Result.framework */; };
+		E7144B0D1C33074B00928714 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7144B0C1C33074B00928714 /* ReactiveCocoa.framework */; };
 		F17E1DE22D421D0B5179D954 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64EBEFC0F7F3C46826438380 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +38,9 @@
 		7B6C0F572E820C16B8ACCB6D /* AppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3CC4D52B5D369E3141735E1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCF03E9AB85A9078ED640CE1 /* DeltaTodoExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeltaTodoExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7144B081C33074500928714 /* Delta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Delta.framework; path = Carthage/Build/iOS/Delta.framework; sourceTree = "<group>"; };
+		E7144B0A1C33074800928714 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		E7144B0C1C33074B00928714 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		F18692A99FA11363087CDA86 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -50,6 +56,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7144B0D1C33074B00928714 /* ReactiveCocoa.framework in Frameworks */,
+				E7144B0B1C33074800928714 /* Result.framework in Frameworks */,
+				E7144B091C33074500928714 /* Delta.framework in Frameworks */,
 				C7A7B4D5BDB8F35275A96B04 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,6 +86,9 @@
 		0F187F6805C7A5A6BC0567A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E7144B0C1C33074B00928714 /* ReactiveCocoa.framework */,
+				E7144B0A1C33074800928714 /* Result.framework */,
+				E7144B081C33074500928714 /* Delta.framework */,
 				E4B49DC031F5D43F798DD8D9 /* iOS */,
 			);
 			name = Frameworks;
@@ -253,7 +265,7 @@
 			attributes = {
 				CLASSPREFIX = "";
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = thoughtbot;
 			};
 			buildConfigurationList = 7479F041CF8098B3FAB5D3F4 /* Build configuration list for PBXProject "DeltaTodoExample" */;
@@ -302,6 +314,9 @@
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Delta.framework",
 			);
 			name = "Copy frameworks (Carthage)";
 			outputPaths = (
@@ -374,10 +389,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				INFOPLIST_FILE = "DeltaTodoExample/Resources/Other-Sources/Info.plist";
+				INFOPLIST_FILE = "Source/Resources/Other-Sources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thoughtbot.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 			};
@@ -389,9 +409,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "DeltaTodoExample/Resources/Other-Sources/Info.plist";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "Source/Resources/Other-Sources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thoughtbot.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 			};
@@ -421,6 +446,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -514,6 +540,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				INFOPLIST_FILE = "UnitTests/Resources/UnitTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thoughtbot.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -533,6 +560,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				INFOPLIST_FILE = "UnitTests/Resources/UnitTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thoughtbot.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
