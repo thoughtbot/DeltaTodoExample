@@ -25,6 +25,7 @@
 		E7144B1E1C330BEB00928714 /* TodosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7144B1D1C330BEB00928714 /* TodosViewModel.swift */; };
 		E7144B211C330EB000928714 /* ToggleCompletedAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7144B201C330EB000928714 /* ToggleCompletedAction.swift */; };
 		E7C976CF1C331C4E000ECE96 /* CreateTodoAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C976CE1C331C4E000ECE96 /* CreateTodoAction.swift */; };
+		E7C976D11C332005000ECE96 /* DeleteTodoAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C976D01C332005000ECE96 /* DeleteTodoAction.swift */; };
 		F17E1DE22D421D0B5179D954 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64EBEFC0F7F3C46826438380 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		E7144B1D1C330BEB00928714 /* TodosViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodosViewModel.swift; sourceTree = "<group>"; };
 		E7144B201C330EB000928714 /* ToggleCompletedAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToggleCompletedAction.swift; path = Actions/ToggleCompletedAction.swift; sourceTree = "<group>"; };
 		E7C976CE1C331C4E000ECE96 /* CreateTodoAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateTodoAction.swift; path = Actions/CreateTodoAction.swift; sourceTree = "<group>"; };
+		E7C976D01C332005000ECE96 /* DeleteTodoAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeleteTodoAction.swift; path = Actions/DeleteTodoAction.swift; sourceTree = "<group>"; };
 		F18692A99FA11363087CDA86 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -258,6 +260,7 @@
 			children = (
 				E7144B201C330EB000928714 /* ToggleCompletedAction.swift */,
 				E7C976CE1C331C4E000ECE96 /* CreateTodoAction.swift */,
+				E7C976D01C332005000ECE96 /* DeleteTodoAction.swift */,
 			);
 			name = Actions;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				28C5C9B779A42774C0071E4D /* AppDelegate.swift in Sources */,
 				E7144B0F1C33081B00928714 /* Store.swift in Sources */,
 				E7144B211C330EB000928714 /* ToggleCompletedAction.swift in Sources */,
+				E7C976D11C332005000ECE96 /* DeleteTodoAction.swift in Sources */,
 				E7144B1C1C330AF900928714 /* TodoTableViewCell.swift in Sources */,
 				E7144B1E1C330BEB00928714 /* TodosViewModel.swift in Sources */,
 				E7144B111C33082400928714 /* Getters.swift in Sources */,

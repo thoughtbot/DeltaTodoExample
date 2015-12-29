@@ -32,6 +32,13 @@ class TodoTableViewController: UITableViewController {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            let todo = viewModel.todoForIndexPath(indexPath)
+            store.dispatch(DeleteTodoAction(todo: todo))
+        }
+    }
+
     @IBAction func addTapped(sender: UIBarButtonItem) {
         let alertController = UIAlertController(title: "Create", message: "Create a new todo item", preferredStyle: .Alert)
 
