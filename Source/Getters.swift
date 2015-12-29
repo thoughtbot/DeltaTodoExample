@@ -5,6 +5,10 @@ extension Store {
         return state.value.todos
     }
 
+    var activeFilter: MutableProperty<TodoFilter> {
+        return state.value.filter
+    }
+
     var completedTodos: SignalProducer<[Todo], NoError> {
         return todos.producer.map { todos in
             return todos.filter { $0.completed }

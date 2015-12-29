@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PP4-Bi-QoM">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -14,15 +13,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="uhS-Gg-Ppp" userLabel="Footer View" customClass="FooterView" customModule="DeltaTodoExample" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="136" width="600" height="44"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="VeI-fo-sEF">
+                            <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gf-lz-LC8">
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rwf-y7-M8X">
+                                    <rect key="frame" x="8" y="8" width="584" height="29"/>
+                                    <segments>
+                                        <segment title="All"/>
+                                        <segment title="Active"/>
+                                        <segment title="Completed"/>
+                                    </segments>
+                                </segmentedControl>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="rwf-y7-M8X" firstAttribute="leading" secondItem="VeI-fo-sEF" secondAttribute="leadingMargin" id="5HN-mI-fle"/>
+                                <constraint firstItem="rwf-y7-M8X" firstAttribute="centerY" secondItem="VeI-fo-sEF" secondAttribute="centerY" id="GCB-yT-znP"/>
+                                <constraint firstItem="rwf-y7-M8X" firstAttribute="trailing" secondItem="VeI-fo-sEF" secondAttribute="trailingMargin" id="qEY-YY-zaD"/>
+                            </constraints>
+                        </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="uhS-Gg-Ppp" userLabel="Footer View" customClass="FooterView" customModule="DeltaTodoExample" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="180" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1gf-lz-LC8">
                                     <rect key="frame" x="8" y="0.0" width="584" height="44"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="0 items Left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6G-tK-JWG">
-                                            <rect key="frame" x="0.0" y="0.0" width="496" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="491" height="44"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -53,7 +72,7 @@
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="todoCell" textLabel="V35-CZ-MdP" style="IBUITableViewCellStyleDefault" id="6o5-XK-eKw" customClass="TodoTableViewCell" customModule="DeltaTodoExample" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6o5-XK-eKw" id="J2p-aZ-Yad">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -70,6 +89,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="XbV-bS-n0P" id="fdg-sx-6Lv"/>
                             <outlet property="delegate" destination="XbV-bS-n0P" id="aG0-fi-zEZ"/>
@@ -82,6 +102,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="filterSegmentedControl" destination="rwf-y7-M8X" id="X6B-dj-qhR"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t2O-qr-Cne" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

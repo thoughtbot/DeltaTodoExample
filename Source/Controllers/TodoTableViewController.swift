@@ -1,6 +1,8 @@
 import UIKit
 
 class TodoTableViewController: UITableViewController {
+    @IBOutlet weak var filterSegmentedControl: UISegmentedControl!
+
     var viewModel = TodosViewModel(todos: []) {
         didSet {
             tableView.reloadData()
@@ -8,6 +10,10 @@ class TodoTableViewController: UITableViewController {
     }
 
     override func viewDidLoad() {
+        store.activeFilter.producer.startWithNext { filter in
+            self.filterSegmentedControl.selectedSegmentIndex = filter.rawValue
+        }
+
         store.todos.producer.startWithNext { todos in
             self.viewModel = TodosViewModel(todos: todos)
         }

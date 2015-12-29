@@ -5,4 +5,6 @@ struct AppState {
         Todo(name: "Create example app", completed: true),
         Todo(name: "Celebrate", completed: false),
     ])
+
+    let filter = MutableProperty(TodoFilter.All)
 }

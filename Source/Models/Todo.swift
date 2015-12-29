@@ -1,3 +1,9 @@
+enum TodoFilter: Int {
+    case All
+    case Active
+    case Completed
+}
+
 struct Todo {
     let name: String
     let completed: Bool
