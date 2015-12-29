@@ -28,6 +28,7 @@
 		E7C976D11C332005000ECE96 /* DeleteTodoAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C976D01C332005000ECE96 /* DeleteTodoAction.swift */; };
 		E7C976D31C3322E7000ECE96 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C976D21C3322E7000ECE96 /* FooterView.swift */; };
 		E7C976D51C332971000ECE96 /* ClearCompletedTodosAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C976D41C332971000ECE96 /* ClearCompletedTodosAction.swift */; };
+		E7C976D71C334C67000ECE96 /* SetFilterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C976D61C334C67000ECE96 /* SetFilterAction.swift */; };
 		F17E1DE22D421D0B5179D954 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64EBEFC0F7F3C46826438380 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		E7C976D01C332005000ECE96 /* DeleteTodoAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeleteTodoAction.swift; path = Actions/DeleteTodoAction.swift; sourceTree = "<group>"; };
 		E7C976D21C3322E7000ECE96 /* FooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FooterView.swift; path = Views/FooterView.swift; sourceTree = "<group>"; };
 		E7C976D41C332971000ECE96 /* ClearCompletedTodosAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClearCompletedTodosAction.swift; path = Actions/ClearCompletedTodosAction.swift; sourceTree = "<group>"; };
+		E7C976D61C334C67000ECE96 /* SetFilterAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetFilterAction.swift; path = Actions/SetFilterAction.swift; sourceTree = "<group>"; };
 		F18692A99FA11363087CDA86 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -267,6 +269,7 @@
 				E7C976CE1C331C4E000ECE96 /* CreateTodoAction.swift */,
 				E7C976D01C332005000ECE96 /* DeleteTodoAction.swift */,
 				E7C976D41C332971000ECE96 /* ClearCompletedTodosAction.swift */,
+				E7C976D61C334C67000ECE96 /* SetFilterAction.swift */,
 			);
 			name = Actions;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7144B171C33094E00928714 /* ReactiveCocoa.swift in Sources */,
+				E7C976D71C334C67000ECE96 /* SetFilterAction.swift in Sources */,
 				28C5C9B779A42774C0071E4D /* AppDelegate.swift in Sources */,
 				E7144B0F1C33081B00928714 /* Store.swift in Sources */,
 				E7144B211C330EB000928714 /* ToggleCompletedAction.swift in Sources */,

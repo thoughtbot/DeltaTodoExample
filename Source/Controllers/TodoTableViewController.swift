@@ -10,6 +10,8 @@ class TodoTableViewController: UITableViewController {
     }
 
     override func viewDidLoad() {
+        filterSegmentedControl.addTarget(self, action: "filterValueChanged", forControlEvents: .ValueChanged)
+
         store.activeFilter.producer.startWithNext { filter in
             self.filterSegmentedControl.selectedSegmentIndex = filter.rawValue
         }
@@ -37,6 +39,13 @@ extension TodoTableViewController {
         })
 
         presentViewController(alertController, animated: false, completion: nil)
+    }
+
+    func filterValueChanged() {
+        guard let newFilter = TodoFilter(rawValue: filterSegmentedControl.selectedSegmentIndex)
+        else { return }
+
+        store.dispatch(SetFilterAction(filter: newFilter))
     }
 }
 
