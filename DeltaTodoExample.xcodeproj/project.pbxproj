@@ -27,6 +27,7 @@
 		E7C976CF1C331C4E000ECE96 /* CreateTodoAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C976CE1C331C4E000ECE96 /* CreateTodoAction.swift */; };
 		E7C976D11C332005000ECE96 /* DeleteTodoAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C976D01C332005000ECE96 /* DeleteTodoAction.swift */; };
 		E7C976D31C3322E7000ECE96 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C976D21C3322E7000ECE96 /* FooterView.swift */; };
+		E7C976D51C332971000ECE96 /* ClearCompletedTodosAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C976D41C332971000ECE96 /* ClearCompletedTodosAction.swift */; };
 		F17E1DE22D421D0B5179D954 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64EBEFC0F7F3C46826438380 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		E7C976CE1C331C4E000ECE96 /* CreateTodoAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateTodoAction.swift; path = Actions/CreateTodoAction.swift; sourceTree = "<group>"; };
 		E7C976D01C332005000ECE96 /* DeleteTodoAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeleteTodoAction.swift; path = Actions/DeleteTodoAction.swift; sourceTree = "<group>"; };
 		E7C976D21C3322E7000ECE96 /* FooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FooterView.swift; path = Views/FooterView.swift; sourceTree = "<group>"; };
+		E7C976D41C332971000ECE96 /* ClearCompletedTodosAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClearCompletedTodosAction.swift; path = Actions/ClearCompletedTodosAction.swift; sourceTree = "<group>"; };
 		F18692A99FA11363087CDA86 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -264,6 +266,7 @@
 				E7144B201C330EB000928714 /* ToggleCompletedAction.swift */,
 				E7C976CE1C331C4E000ECE96 /* CreateTodoAction.swift */,
 				E7C976D01C332005000ECE96 /* DeleteTodoAction.swift */,
+				E7C976D41C332971000ECE96 /* ClearCompletedTodosAction.swift */,
 			);
 			name = Actions;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				E7144B1E1C330BEB00928714 /* TodosViewModel.swift in Sources */,
 				E7144B111C33082400928714 /* Getters.swift in Sources */,
 				E7144B191C330AB700928714 /* TodoTableViewController.swift in Sources */,
+				E7C976D51C332971000ECE96 /* ClearCompletedTodosAction.swift in Sources */,
 				E7144B131C33082C00928714 /* AppState.swift in Sources */,
 				E7144B151C33087000928714 /* Todo.swift in Sources */,
 				E7C976D31C3322E7000ECE96 /* FooterView.swift in Sources */,

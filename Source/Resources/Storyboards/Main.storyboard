@@ -21,12 +21,25 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gf-lz-LC8">
                                     <rect key="frame" x="8" y="0.0" width="584" height="44"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 items Left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6G-tK-JWG">
-                                            <rect key="frame" x="0.0" y="0.0" width="584" height="44"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="0 items Left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6G-tK-JWG">
+                                            <rect key="frame" x="0.0" y="0.0" width="496" height="44"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQB-f3-ek8">
+                                            <rect key="frame" x="496" y="0.0" width="88" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="2BW-8F-jo5"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                            <state key="normal" title="Clear Completed"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="2BW-8F-jo5"/>
+                                                </mask>
+                                            </variation>
+                                        </button>
                                     </subviews>
                                 </stackView>
                             </subviews>

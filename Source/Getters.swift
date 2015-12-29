@@ -5,6 +5,12 @@ extension Store {
         return state.value.todos
     }
 
+    var completedTodos: SignalProducer<[Todo], NoError> {
+        return todos.producer.map { todos in
+            return todos.filter { $0.completed }
+        }
+    }
+
     var incompleteTodos: SignalProducer<[Todo], NoError> {
         return todos.producer.map { todos in
             return todos.filter { !$0.completed }
