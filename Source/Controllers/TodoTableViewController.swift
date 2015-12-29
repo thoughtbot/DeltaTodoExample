@@ -16,7 +16,7 @@ class TodoTableViewController: UITableViewController {
             self.filterSegmentedControl.selectedSegmentIndex = filter.rawValue
         }
 
-        store.todos.producer.startWithNext { todos in
+        store.activeTodos.startWithNext { todos in
             self.viewModel = TodosViewModel(todos: todos)
         }
     }

@@ -1,5 +1,6 @@
 import ReactiveCocoa
 
+// MARK: Properties
 extension Store {
     var todos: MutableProperty<[Todo]> {
         return state.value.todos
@@ -7,6 +8,19 @@ extension Store {
 
     var activeFilter: MutableProperty<TodoFilter> {
         return state.value.filter
+    }
+}
+
+// MARK: SignalProducers
+extension Store {
+    var activeTodos: SignalProducer<[Todo], NoError> {
+        return activeFilter.producer.flatMap(.Latest) { filter -> SignalProducer<[Todo], NoError> in
+            switch filter {
+            case .All: return self.todos.producer
+            case .Active: return self.incompleteTodos
+            case .Completed: return self.completedTodos
+            }
+        }
     }
 
     var completedTodos: SignalProducer<[Todo], NoError> {
